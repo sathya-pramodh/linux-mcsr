@@ -23,3 +23,4 @@ The instructions given below will be the pre-install setup. By the end of it, yo
 
 # Moving Ahead
 - Now we start with the difficult part of the installation. We make decisions based on your PC configuration. So make sure to follow through the instructions very carefully.
+- Proceed to [this document](https://github.com/sathya-pramodh/linux-mcsr/blob/main/doc/live-env.md) after making sure that you have everything setup correctly from this step.

@@ -23,4 +23,4 @@ The instructions given below will install Linux Mint on your PC. Make sure to fo
 - Next you will be prompted to set your username, hostname (the computer's name) and your password. This password will be required to login to your system and this is the username that you will login to your install with. 
 - Click on **Continue** and you are done! Wait for about 15-20 minutes (dependent on your network speed) and your Linux Mint install should be complete! Easy right? Well, we still have to setup everything for MCSR. This is still the basic installation!
 - The installer will prompt you to restart your PC. You can do that and remove the bootable USB that you plugged in.
-- Now you can boot into your install and move forward to install everything related to MCSR [here](https://github.com/sathya-pramodh/linux-mcsr/blob/main/post-install.md).
+- Now you can boot into your install and move forward to install everything related to MCSR [here](https://github.com/sathya-pramodh/linux-mcsr/blob/main/doc/post-install.md).

@@ -3,7 +3,7 @@ The instructions given below will guide you through the post installation proced
 
 # NVIDIA Drivers
 - Before we proceed to install Minecraft and Java we need to first install the NVIDIA Drivers.
-- If you are not on an NVIDIA GPU you can skip this section and proceed to the next one.
+- If you are not on an NVIDIA GPU you can skip this section and proceed to the next one. You can still check in here to see if you have additional proprietary drivers that you might need to install.
 - When you boot into Mint, on the startup dialog, Go into **First Steps** section and scroll down and open the application named **Driver Manager**.
 - It should automatically detect that you have an NVIDIA GPU and should suggest a list of drivers to install.
 - The recommended option should be good enough. Click on the radio button to activate it and click on **Apply Changes** and enter your password as prompted.
@@ -39,24 +39,132 @@ The instructions given below will guide you through the post installation proced
 
 # resetti
 - This is the Multi Instance macro we will be using on Linux.
-- To install it, go [here](https://github.com/woofdoggo/resetti/releases/latest). Download the binary from the github release. If you are using Firefox (the default browser for Linux Mint) it should download the binary to the **Downloads** folder. If you download it elsewhere, replace **Downloads** with the path to that folder in the command given below. E.g: If you download it to your **Documents** folder, then your path would look something like **/home/<user_name>/Documents**.
+- To install it, go [here](https://github.com/woofdoggo/resetti/releases/latest). Download the binary from the github release. If you are using Firefox (the default browser for Linux Mint) it should download the binary to the **Downloads** folder. If you download it elsewhere, replace **Downloads** with the path to that folder in the command given below. E.g: If you download it to your **Documents** folder, then your path would look something like `/home/<user_name>/Documents`.
 - To update the binary, delete the binary from your **Downloads** folder and then go through the install process for **resetti** again.
 - For more detailed install instructions with setup for OBS and everything, refer to the docs for **resetti** [here](https://github.com/woofdoggo/resetti).
 - We are planning to add an auto-updating feature to the binary so you don't have to go through the process over and over again.
-- To execute the macro, open a terminal window by hitting **Ctrl+Alt+T**. Now go into your **Downloads** folder by performing the following command (replace Downloads with the path you got from above if you downloaded the binary to another folder)
-```
+- To execute the macro, open a terminal window by hitting `Ctrl+Alt+T`. Now go into your **Downloads** folder by performing the following command (replace Downloads with the path you got from above if you downloaded the binary to another folder)
+```bash
 cd Downloads
 ```
 - Now, set the executable flag to the binary by executing the following command. **NOTE: This has to be done only once(after an update or after the first download)**
-```
+```bash
 chmod +x resetti
 ```
 - Now, you can start the macro by doing this following command
-```
+```bash
 ./resetti <config_name>
 ```
 - Here, replace **<config_name>** with the configuration name you want to use. All about the configuration of the macro is, again, given in the docs for **resetti** [here](https://github.com/woofdoggo/resetti/).
 - If you have any questions, asking it in the [resetti discord](https://discord.gg/fwZA2VJh7k) is your best option.
+
+# NinjabrainBot
+- Download the .jar for NinjabrainBot as per usual from [here](https://github.com/Ninjabrain1/Ninjabrain-Bot/releases/latest).
+- Lets take an example where the .jar file is downloaded into the **Downloads** folder.
+- Now to add it as an application to your list of applications, create this file with the following contents under `~/.local/share/applications/NinjabrainBot.desktop`
+```bash
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Name=NinjabrainBot
+Icon=minecraft
+Exec=java -jar /home/<user_name>/Downloads/Ninjabrain-Bot-1.4.1.jar
+```
+- If the directory does not exist, then make the directory/directories by executing the following command in a terminal
+```bash
+mkdir -p ~/.local/share/applications/
+```
+- Remember that the file name will change over versions. So as you update Ninjabrain Bot, you will have to change this file as well. Also, you will have to replace `<user_name>` with your username that you set during the install.
+- If you downloaded it elsewhere, then replace `/home/<user_name>/Downloads/Ninjabrain-Bot-1.4.1.jar` with the relevant path.
+- Now you can launch Ninjabrain Bot from your applications menu!
+
+# ModCheck
+- Download the .jar for ModCheck as per usual from [here](https://github.com/RedLime/ModCheck/releases/latest)
+- Lets take an example where the .jar file is downloaded into the **Downloads** folder.
+- Now to add it as an application to your list of applications, create this file with the following contents under `~/.local/share/applications/ModCheck.desktop`
+```bash
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Name=NinjabrainBot
+Icon=minecraft
+Exec=java -jar /home/<user_name>/Downloads/ModCheck-0.5.3.jar
+```
+- If the directory does not exist, then make the directory/directories by executing the following command in a terminal
+```bash
+mkdir -p ~/.local/share/applications/
+```
+- Remember that the file name will change over versions. So as you update ModCheck, you will have to change this file as well. Also, you will have to replace `<user_name>` with your username that you set during the install.
+- If you downloaded it elsewhere, then replace `/home/<user_name>/Downloads/ModCheck-0.5.3.jar` with the relevant path.
+- Now you can launch ModCheck from your applications menu!
+
+# Micro Optimizations
+## Jemalloc setup for better Minecraft Performance
+- To install `jemalloc` on Linux Mint as guided [here](https://github.com/woofdoggo/resetti/blob/main/doc/troubleshooting.md#improving-malloc-performance), go into the **Software Manager** and search for **jemalloc** and install the first package that shows up.
+- This should setup jemalloc for you. Just make sure to add the wrapper commands as guided in resetti's docs.
+
+## GLFW Setup to prevent BadWindow crashes.
+- To install `glfw` for Linux Mint as guided [here](https://github.com/woofdoggo/resetti/blob/main/doc/troubleshooting.md#using-system-glfw), go into the **Software Manager** and search for **glfw** and install the first package that shows up.
+- This should setup glfw for you. Using system installation of glfw will then work.
+- The location of `libjemalloc.so` is usually `/lib/libglfw.so.3`. This is what you would do for the next part of the instructions if it crashes with `/usr/bin/java: 1: jemalloc-config not found`.
+
+## Setting up tmpfs
+- You might get slightly better performance while running wall by symlinking your instance world folders into `/tmp/mc/`.
+- First run this following command to create the `mc` directory in `/tmp`
+```bash
+mkdir -p /tmp/mc/
+```
+- E.g. While running PrismLauncher (a fork of MultiMC), I would symlink `~/.local/share/PrismLauncher/instances/Instance1/.minecraft/saves` to `/tmp/mc/1/` and so on by using the command below for each
+```bash
+ln -s ~/.local/share/PrismLauncher/instances/Instance1/.minecraft/saves /tmp/mc/1
+```
+- And now you can keep clearing out this folder every 300s or so by running a simple script in the background.
+- The script would look something like this
+```bash
+#!/bin/bash
+cd /tmp/mc
+while true
+    do 
+        for i in {1..15}
+        do 
+            cd $i && rm -r $(ls -t1 | tail -n 20) && cd ..
+        done
+        sleep 300
+    done
+```
+- Here the last number in the for loop is the total number of instances that you have. Make sure to name the folders exactly as in the above example for this script, i.e., `/tmp/mc/1` and so on.
+- Now set the executable flag on the script by performing the following command in a terminal
+```bash
+chmod +x script.sh
+```
+- And execute it everytime you start your resetting session with the following command 
+```bash
+./script.sh
+```
+- **NOTE: Use this method IF AND ONLY IF you have some RAM to spare with all the instances running and resetting. DO NOT use it if you are using >70-80% of RAM during resetting as running that script in the background takes up memory as well!**
+
+# Rebinding Keys (for bookcrafting)
+- Install `xdotool` and `xbindkeys` from the **Software Manager** by searching for them.
+- Now edit the file name `.xbindkeysrc` in your home directory (shorthanded with `~`) and add these lines inside the file to rebind the one key to the other
+```
+"xdotool key '<Rebound key combination>'"
+    release+'<Original key combination>'
+```
+- E.g: If you want to rebind `r` to `6` then you would add these lines
+```
+"xdotool key '6'"
+    release+r
+```
+- You can just read the examples given in the file to understand clearly how to do it for a modifier setup or for binding a combination of keys.
+- Now run the following command in a terminal to background the process and bind all the keybinds set in `.xbindkeysrc`
+```bash
+xbindkeys
+```
+- If you don't want to background the xbindkeys process (useful for debugging), then execute the following command
+```bash
+xbindkeys -v
+```
+- Note that you need to do one of these above commands in a terminal before you start your resetting session.
 
 # Update Cycle
 - Linux Mint usually doesn't remind you or bug you to update your packages over and over.

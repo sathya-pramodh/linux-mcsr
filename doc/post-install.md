@@ -105,8 +105,10 @@ mkdir -p ~/.local/share/applications/
 
 ## GLFW Setup to prevent BadWindow crashes.
 - To install `glfw` for Linux Mint as guided [here](https://github.com/woofdoggo/resetti/blob/main/doc/common-issues.md#building-glfw-from-source), go into the **Software Manager** and search for **glfw** and install the first package that shows up.
-- This should setup glfw for you. Using system installation of glfw will then work.
+- This should setup glfw for you. Using system installation of glfw for each Minecraft instance in MultiMC by going into `Edit Instance` -> `Settings` -> `Workarounds` -> `Use system installation of GLFW.
 - The location of `libjemalloc.so` is usually `/lib/libglfw.so.3`. This is what you would do for the next part of the instructions if it crashes with `/usr/bin/java: 1: jemalloc-config not found`.
+
+Alternatively, Or you can compile and build GLFW from source and follow the instructions [here](https://github.com/woofdoggo/resetti/blob/main/doc/common-issues.md#building-glfw-from-source).
 
 ## Setting up tmpfs
 - You might get slightly better performance while running wall by symlinking your instance world folders into `/tmp/mc/`.

@@ -100,7 +100,7 @@ mkdir -p ~/.local/share/applications/
 
 # Micro Optimizations
 ## Jemalloc setup for better Minecraft Performance
-- To install `jemalloc` on Linux Mint as guided [here](https://github.com/woofdoggo/resetti/blob/main/doc/troubleshooting.md#improving-malloc-performance), go into the **Software Manager** and search for **jemalloc** and install the first package that shows up.
+- To install `jemalloc` on Linux Mint as guided [here](https://github.com/woofdoggo/resetti/blob/main/doc/optimization.md#malloc-improvements), go into the **Software Manager** and search for **jemalloc** and install the first package that shows up.
 - This should setup jemalloc for you. Just make sure to add the wrapper commands as guided in resetti's docs.
 
 ## GLFW Setup to prevent BadWindow crashes.

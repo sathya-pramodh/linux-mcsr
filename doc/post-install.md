@@ -104,7 +104,7 @@ mkdir -p ~/.local/share/applications/
 - This should setup jemalloc for you. Just make sure to add the wrapper commands as guided in resetti's docs.
 
 ## GLFW Setup to prevent BadWindow crashes.
-- To install `glfw` for Linux Mint as guided [here](https://github.com/woofdoggo/resetti/blob/main/doc/troubleshooting.md#using-system-glfw), go into the **Software Manager** and search for **glfw** and install the first package that shows up.
+- To install `glfw` for Linux Mint as guided [here](https://github.com/woofdoggo/resetti/blob/main/doc/common-issues.md#building-glfw-from-source), go into the **Software Manager** and search for **glfw** and install the first package that shows up.
 - This should setup glfw for you. Using system installation of glfw will then work.
 - The location of `libjemalloc.so` is usually `/lib/libglfw.so.3`. This is what you would do for the next part of the instructions if it crashes with `/usr/bin/java: 1: jemalloc-config not found`.
 

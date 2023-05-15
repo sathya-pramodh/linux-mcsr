@@ -56,7 +56,7 @@ Name=Virtual Inputs
 - Accept the defaults on the `JACK Input Client`.
 
 # Setting up Audio Splits
-- Open up all your instances and open up qpwgraph.
+- Open up qpwgraph.
 - Connect your audio outputs to the virtual inputs. 
 - Connect your spotify output to any of the virtual input as well by connecting the left and right outputs to the left and right inputs respectively. You can get it visible in the graph by opening up spotify and playing any music.
 - Make sure to also route your Virtual Input Devices to the physical output device that you would like to use. For example your headphones.

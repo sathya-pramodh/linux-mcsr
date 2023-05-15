@@ -1,6 +1,13 @@
 # Post Install
 The instructions given below will guide you through the post installation procedure of installing Linux for MCSR.
 
+# Linux Terminal
+- To use Linux on the Desktop casually, you wouldn't need to know the terminal at all.
+- But to setup MCSR, we will have to go through some basic commands and how they work.
+- You can skip this altogether though and just blindly follow the instructions, but to debug stuff better, it is better to know these basics.
+- To learn about the basics of the Linux commandline proceed to [here](https://github.com/sathya-pramodh/linux-mcsr/blob/main/doc/terminal.md).
+- It also has some basic scripting examples with two scripts that you can use to make your life easier with MCSR.
+
 # NVIDIA Drivers
 - Before we proceed to install Minecraft and Java we need to first install the NVIDIA Drivers.
 - If you are not on an NVIDIA GPU you can skip this section and proceed to the next one. You can still check in here to see if you have additional proprietary drivers that you might need to install.
@@ -100,7 +107,7 @@ mkdir -p ~/.local/share/applications/
 
 # Micro Optimizations
 ## Jemalloc setup for better Minecraft Performance
-- To install `jemalloc` on Linux Mint as guided [here](https://github.com/woofdoggo/resetti/blob/main/doc/optimization.md#malloc-improvements), go into the **Software Manager** and search for **jemalloc** and install the first package that shows up.
+- To install `jemalloc` on Linux Mint as guided [here](https://github.com/woofdoggo/resetti/blob/main/doc/troubleshooting.md#improving-malloc-performance), open up a terminal and type in the command `sudo apt install libjemalloc-dev` and type in the password as prompted.
 - This should setup jemalloc for you. Just make sure to add the wrapper commands as guided in resetti's docs.
 
 ## GLFW Setup to prevent BadWindow crashes.
@@ -165,6 +172,10 @@ xbindkeys
 xbindkeys -v
 ```
 - Note that you need to do one of these above commands in a terminal before you start your resetting session.
+
+# Splitting audio on Linux for OBS
+- Splitting audio on Linux using Virtual Audio inputs is always a pain to do. 
+- If you are ready to get this setup, go [here](https://github.com/sathya-pramodh/linux-mcsr/blob/main/doc/splitting-audio.md).
 
 # Update Cycle
 - Linux Mint usually doesn't remind you or bug you to update your packages over and over.

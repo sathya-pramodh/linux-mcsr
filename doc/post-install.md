@@ -95,7 +95,7 @@ Encoding=UTF-8
 Type=Application
 Name=NinjabrainBot
 Icon=minecraft
-Exec=java -jar /home/<user_name>/Downloads/ModCheck-0.5.3.jar
+Exec=java -jar /home/<user_name>/Downloads/ModCheck-0.6.jar
 ```
 - If the directory does not exist, then make the directory/directories by executing the following command in a terminal
 ```bash

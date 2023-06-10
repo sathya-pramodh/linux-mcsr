@@ -7,6 +7,13 @@ In this document we will be setting up Virtual Audio Inputs and splitting audio 
 ```
 sudo apt install qpwgraph
 ```
+- If this doesn't work, you can add a PPA for qpwgraph.
+```bash
+sudo add-apt-repository ppa:rncbc/apps-jammy
+apt update
+apt policy qpwgraph
+sudo apt install qpwgraph
+```
 - We now need to setup `qpwgraph` such that it launches each time with the correct arguments on startup.
 - Copy the following contents into a file named `qpwgraph.desktop` and drop it in `~/.config/autostart/`.
 ```
@@ -24,7 +31,8 @@ Terminal=false
 Type=Application
 ```
 - We will be using this application later on to setup output routing.
-- **NOTE**: If you are using a window manager though, make sure to add `qpwgraph -axm` to your autostart script for your window manager.
+- **NOTE**: If you are using a window manager though, make sure to add `qpwgraph <path_to_config> -axm` to your autostart script for your window manager by replacing `<path_to_config>` with the path of the config you save later on during the setup.
+- Eg: Say a config is in `~/Speedrunning.qpwgraph`, then we put `qpwgraph ~/Speedrunning.qpwgraph -axm`.
 
 # Setting up Virtual Audio Cables
 - We setup virtual audio cables by using a script that launches each time you login to your system.

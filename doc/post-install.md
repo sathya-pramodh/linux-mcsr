@@ -88,8 +88,8 @@ mkdir -p ~/.local/share/applications/
 
 # Boat Eye
 - Setting up boat eye on Linux is not as easy as it is on Windows. You might see some super weird behaviour while using it just because X11 handles mouse movement much different than Windows.
-- Make sure to follow instructions as closely as possible but if you do get any errors, make sure to post an issue (here)[https://github.com/sathya-pramodh/linux-mcsr/issues] and I'll try and fix/debug the issue as far as possible.
-- Go (here)[https://github.com/sathya-pramodh/linux-mcsr/blob/main/doc/boat-eye.md].
+- Make sure to follow instructions as closely as possible but if you do get any errors, make sure to post an issue [here](https://github.com/sathya-pramodh/linux-mcsr/issues) and I'll try and fix/debug the issue as far as possible.
+- Go [here](https://github.com/sathya-pramodh/linux-mcsr/blob/main/doc/boat-eye.md).
 
 # ModCheck
 - Download the .jar for ModCheck as per usual from [here](https://github.com/RedLime/ModCheck/releases/latest)

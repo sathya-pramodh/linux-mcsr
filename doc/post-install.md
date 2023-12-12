@@ -123,7 +123,7 @@ mkdir -p ~/.local/share/applications/
 
 ## Setting up tmpfs
 You should get better performance while running wall by symlinking your instance world folders into `/tmp/mc/` and setting `/tmp` as a tmpfs volume.
-What that means is that files in this folders will be stocked in your memory and deleted on every reboot.
+What that means is that files in these folders will be stocked in your memory and deleted on every reboot.
 - First define `/tmp` as a tmpfs volume by adding the following line to `/etc/fstab`
 ```
 tmpfs /tmp tmpfs defaults,size=Xg 0 0
@@ -188,7 +188,7 @@ sudo systemctl start rc-local
 ```
 **NOTE: If you don't have systemd on your distribution, you can use the same script and run it at the start of your session.**
 
-- And now you can keep clearing out theese folders every 300s or so by running a simple script in the background.
+- And now you can keep clearing out these folders every 300s or so by running a simple script in the background.
 - The script would look something like this
 ```bash
 #!/bin/bash

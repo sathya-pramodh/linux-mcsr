@@ -86,6 +86,11 @@ mkdir -p ~/.local/share/applications/
 - If you downloaded it elsewhere, then replace `/home/<user_name>/Downloads/Ninjabrain-Bot-1.4.1.jar` with the relevant path.
 - Now you can launch Ninjabrain Bot from your applications menu!
 
+# Boat Eye
+- Setting up boat eye on Linux is not as easy as it is on Windows. You might see some super weird behaviour while using it just because X11 handles mouse movement much different than Windows.
+- Make sure to follow instructions as closely as possible but if you do get any errors, make sure to post an issue (here)[https://github.com/sathya-pramodh/linux-mcsr/issues] and I'll try and fix/debug the issue as far as possible.
+- Go (here)[https://github.com/sathya-pramodh/linux-mcsr/blob/main/doc/boat-eye.md].
+
 # ModCheck
 - Download the .jar for ModCheck as per usual from [here](https://github.com/RedLime/ModCheck/releases/latest)
 - Lets take an example where the .jar file is downloaded into the **Downloads** folder.
@@ -124,7 +129,7 @@ mkdir -p /tmp/mc/
 ```
 - E.g. While running PrismLauncher (a fork of MultiMC), I would symlink `~/.local/share/PrismLauncher/instances/Instance1/.minecraft/saves` to `/tmp/mc/1/` and so on by using the command below for each
 ```bash
-ln -s ~/.local/share/PrismLauncher/instances/Instance1/.minecraft/saves /tmp/mc/1
+ln -s  /tmp/mc/1 ~/.local/share/PrismLauncher/instances/Instance1/.minecraft/saves
 ```
 - And now you can keep clearing out this folder every 300s or so by running a simple script in the background.
 - The script would look something like this

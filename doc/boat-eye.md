@@ -63,7 +63,10 @@ zoom_multiplier = 0.03125 # Change this to your pleasing by referring to the tab
 device_id = 11 # Change this to the correct device id that you noted down before.
 
 # Do not change anything after this!
-(cur_x, cur_y, cur_w, cur_h) = window.get_active_geometry()
+os.system("xdotool getactivewindow getwindowgeometry | grep Geometry > /tmp/res")
+f = open("/tmp/res")
+cur_h = f.read().strip().split(':')[1].strip().split('x')[1]
+f.close()
 
 if(int(cur_h) == normal_h):
     if "Minecraft" in window.get_active_title():

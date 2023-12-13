@@ -73,7 +73,7 @@ if(int(cur_h) == normal_h):
         os.system(f"wmctrl -R ':ACTIVE:' -e 0,{zoom_x},{zoom_y},{zoom_w},{zoom_h}")
         os.system(f"xinput set-prop {device_id} 'Coordinate Transformation Matrix' {zoom_multiplier} 0 0 0 {zoom_multiplier} 0 0 0 1")
         
-elif(int(cur_h) == zoom_h):
+else:
     os.system(f"wmctrl -R ':ACTIVE:' -e 0,{normal_x},{normal_y},{normal_w},{normal_h}")
     os.system(f"xinput set-prop {device_id} 'Coordinate Transformation Matrix' {normal_multiplier} 0 0 0 {normal_multiplier} 0 0 0 1")
 ```

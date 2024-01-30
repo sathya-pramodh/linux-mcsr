@@ -1,0 +1,6 @@
+[book]
+authors = ["sathya-pramodh", "GroobleDierne","OhNishant"]
+language = "en"
+multilingual = false
+src = "doc"
+title = "Linux Guide for MCSR"

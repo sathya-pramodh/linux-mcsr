@@ -1,11 +1,11 @@
-## Setting up tmpfs
+# Setting up tmpfs
 
 You should get better performance while running wall by symlinking your instance world folders into `/tmp/mc/` and setting `/tmp` as a tmpfs volume.
 What that means is that files in these folders will be stocked in your memory and deleted on every reboot.
 
 - First define `/tmp` as a tmpfs volume by adding the following line to `/etc/fstab`
 
-```
+```bash
 tmpfs /tmp tmpfs defaults,size=Xg 0 0
 ```
 

@@ -22,4 +22,4 @@ The instructions given below will be the setup step to start installing Linux Mi
 - Now that you have the Live Environment running, you can test out the OS partially here.
 - Linux, given its versatility, doesn't require you to install the system on your physical hardware in order to test it. So whatever you do on here will not affect what you have already on your system.
 - But of course, nothing that you do here would be reflected in your physical install as well. So feel free to mess around until you feel comfortable enough.
-- Make yourself comfortable with the workflow of the system and when you are done, you can proceed to [here](https://github.com/sathya-pramodh/linux-mcsr/blob/main/doc/installation.md).
+- Make yourself comfortable with the workflow of the system and when you are done, you can proceed with the installation procedure.

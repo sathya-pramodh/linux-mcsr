@@ -5,7 +5,7 @@
 # Getting Started
 
 - The instructions start from the very basics and explain each step verbosely. Feel free to skip some steps if you know what you are doing.
-- You can get started right [here](https://sathya-pramodh.github.io/linux-mcsr).
+- You can get started right [here](index.html).
 
 # License
 

@@ -4,8 +4,6 @@ Setting up boat eye on Linux is not as easy as it is on Windows. You might see s
 
 Make sure to follow instructions as closely as possible but if you do get any errors, make sure to post an issue [here](https://github.com/sathya-pramodh/linux-mcsr/issues) and I'll try and fix/debug the issue as far as possible.
 
-Go [here](https://github.com/sathya-pramodh/linux-mcsr/blob/main/doc/boat-eye.md) to continue with boat eye setup.
-
 The instructions given below will guide you through the procedure to setup boat eye on Linux.
 
 # Flagged WMs
@@ -112,4 +110,4 @@ else:
 
 - The zoom overlay for pixel counting could also be setup the same way as Windows by using the method for non-Julti macros (using a screen capture on OBS).
 - However, this version of the Tall Macro doesn't support moving the projector under the Tall Minecraft Window and displaying it alongside. But it is possible to have another screen where it is always open and just peeking over at that to count pixels.
-- Congratulations! We have successfully setup boat eye on Linux! Go [here](https://github.com/sathya-pramodh/linux-mcsr/blob/main/doc/post-install.md#modcheck) to continue with the post install setup.
+- Congratulations! We have successfully setup boat eye on Linux!

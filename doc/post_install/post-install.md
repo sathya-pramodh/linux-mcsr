@@ -7,12 +7,6 @@ The instructions given below will guide you through the post installation proced
 - The software manager is the best place for you to search and install packages and apps.
 - If you cannot find any package on it for some reason, Googling about it is your best friend. If Google doesn't have an answer for it too, then you can open an issue in [here](https://github.com/sathya-pramodh/linux-mcsr/issues/).
 
-# Boat Eye
-
-- Setting up boat eye on Linux is not as easy as it is on Windows. You might see some super weird behaviour while using it just because X11 handles mouse movement much different than Windows.
-- Make sure to follow instructions as closely as possible but if you do get any errors, make sure to post an issue [here](https://github.com/sathya-pramodh/linux-mcsr/issues) and I'll try and fix/debug the issue as far as possible.
-- Go [here](https://github.com/sathya-pramodh/linux-mcsr/blob/main/doc/boat-eye.md) to continue with boat eye setup.
-
 # Update Cycle
 
 - Linux Mint usually doesn't remind you or bug you to update your packages over and over.

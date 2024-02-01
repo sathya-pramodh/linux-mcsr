@@ -14,6 +14,7 @@
   - [Terminal](./post_install/terminal.md)
   - [Graphics Drivers](./post_install/nvidia.md)
   - [Java](./post_install/java.md)
+  - [OBS](./post_install/obs.md)
 
 # All the things Minecraft
 

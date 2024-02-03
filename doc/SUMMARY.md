@@ -11,7 +11,9 @@
 # Post-Installation
 
 - [Get the things going](./post_install/post-install.md)
-  - [Terminal](./post_install/terminal.md)
+  - [Terminal](./post_install/terminal_intro.md)
+    - [Basic Terminal usage](./post_install/terminal.md)
+    - [Scripting using Bash](./post_install/bash_scripting.md)
   - [Graphics Drivers](./post_install/nvidia.md)
   - [Java](./post_install/java.md)
   - [OBS](./post_install/obs.md)

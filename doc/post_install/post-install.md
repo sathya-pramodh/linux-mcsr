@@ -1,6 +1,6 @@
 # Post Install
 
-The instructions given below will guide you through the post installation procedure of installing Linux for MCSR.
+The following chapters will guide you through the post installation procedure of installing Linux for MCSR.
 
 # Software Manager
 
@@ -13,8 +13,3 @@ The instructions given below will guide you through the post installation proced
 - It has an update manager that reminds you if you have some major security updates pending.
 - But if for some reason it misses it, then our recommendation is for you to follow a **monthly** update schedule, i.e., make sure to update all your packages by opening **Update Manager** on a monthly basis.
 - This is just to make sure you don't run into any problems and to get the latest software for your system as early as possible.
-
-# All done!
-
-- Congratulations!! You just setup Linux for MCSR!! Happy resetting! :D
-- Feel free to open an issue in [here](https://github.com/sathya-pramodh/linux-mcsr/issues) if you face any issues/problems while running your system. Good luck!

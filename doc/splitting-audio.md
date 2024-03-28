@@ -8,16 +8,7 @@ In this document we will be setting up Virtual Audio Inputs and splitting audio 
 - You can download it by executing this in your terminal
 
 ```
-sudo apt install qpwgraph
-```
-
-- If this doesn't work, you can add a PPA for qpwgraph.
-
-```bash
-sudo add-apt-repository ppa:rncbc/apps-jammy
-apt update
-apt policy qpwgraph
-sudo apt install qpwgraph
+sudo dnf install qpwgraph
 ```
 
 - We now need to setup `qpwgraph` such that it launches each time with the correct arguments on startup.
@@ -40,7 +31,7 @@ Type=Application
 
 - We will be using this application later on to setup output routing.
 - **NOTE**: If you are using a window manager though, make sure to add `qpwgraph <path_to_config> -axm` to your autostart script for your window manager by replacing `<path_to_config>` with the path of the config you save later on during the setup.
-- Eg: Say a config is in `~/Speedrunning.qpwgraph`, then we put `qpwgraph ~/Speedrunning.qpwgraph -axm`.
+- Eg: In i3, Say a config is in `~/Speedrunning.qpwgraph`, then we put `exec qpwgraph ~/Speedrunning.qpwgraph -axm` in `~/.config/i3/config`.
 
 # Setting up Virtual Audio Cables
 
@@ -53,7 +44,7 @@ pactl load-module module-null-sink media.class=Audio/Sink sink_name=Virtual_Inpu
 pactl load-module module-null-sink media.class=Audio/Sink sink_name=Virtual_Input_2
 ```
 
-- If you don't have the `pactl` command you can install it by executing `sudo apt install pactl`.
+- If you don't have the `pactl` command you can install it by executing `sudo dnf install pulseaudio-utils`.
 - The above script is to make 2 virtual inputs which are more than enough to do basic audio splitting. You can add more by just copying and pasting these lines and changing the `sink_name` to `Virtual_Input_3` and so on.
 - Now we can setup `virtual_inputs` to launch on startup.
 - Copy the following contents into a file named `virtual_inputs.desktop` and drop it in `~/.config/autostart/`.
@@ -69,6 +60,7 @@ Name=Virtual Inputs
 
 - Now you can logout and login to your system and see that an icon is added to your taskbar at the very right.
 - **NOTE**: If you are using a window manager though, make sure to add `virtual_inputs &` to your autostart script for your window manager.
+- Eg: In i3, we would add `exec virtual_inputs` to `~/.config/i3/config`
 
 # Setting up OBS
 
@@ -90,7 +82,7 @@ Name=Virtual Inputs
 - Now hit `Ctrl + S` to save changes in qpwgraph. If this somehow doesn't work, you can try qutting the application by right clicking on the taskbar icon and choosing `Exit`. It should prompt you to save it as something. Save it giving it any name you choose and close.
 - Now qpwgraph should startup each time you login with that graph applied, so the audio connections would be made automatically as the instances, OBS and spotify launch.
 - Sometimes with the Spotify desktop app you might have some issues with the connections flickering from one Virtual Input to the other. If so, please post an issue [here](https://github.com/sathya-pramodh/linux-mcsr/issues).
-- Now go into your Linux Mint settings and go into the `Audio` settings tab and set the current audio device that you are using to be any of the virtual inputs that you want. Mind you, this step is done because you would want all your game audio to be routed to that virtual input because the audio outputs of Minecraft gets re-routed each time there is a sound played for some reason.
+- Now go into your Fedora settings and go into the `Audio` settings tab and set the current audio device that you are using to be any of the virtual inputs that you want. Mind you, this step is done because you would want all your game audio to be routed to that virtual input because the audio outputs of Minecraft gets re-routed each time there is a sound played for some reason.
 
 # All done!
 

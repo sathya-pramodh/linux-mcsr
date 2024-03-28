@@ -9,7 +9,6 @@ The following chapters will guide you through the post installation procedure of
 
 # Update Cycle
 
-- Linux Mint usually doesn't remind you or bug you to update your packages over and over.
-- It has an update manager that reminds you if you have some major security updates pending.
-- But if for some reason it misses it, then our recommendation is for you to follow a **monthly** update schedule, i.e., make sure to update all your packages by opening **Update Manager** on a monthly basis.
+- Fedora usually doesn't remind you or bug you to update your packages over and over.
+- Our recommendation is for you to follow a **monthly** update schedule, i.e., make sure to update all your packages by opening **Software** on a monthly basis.
 - This is just to make sure you don't run into any problems and to get the latest software for your system as early as possible.

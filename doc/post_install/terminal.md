@@ -8,7 +8,7 @@ It's a part of every system (irrespective of Operating System) that helps you co
 
 It is a very powerful tool and most of the time, GUI applications have these commands running in the back when you click buttons to perform actions.
 
-You can open up a terminal on Linux Mint by hitting the keybind `Ctrl+Shift+T`.
+You can open up a terminal on Fedora by hitting the keybind `Ctrl+Shift+T`.
 
 # Directories
 
@@ -142,7 +142,6 @@ sudo apt update
 
 - Super user privileges are required for package manager commands on any Linux system.
 - So to install packages you will be prompted to give your password.
-- While typing in the password, the terminal would not respond with a `*` being filled in place of the characters in other distributions. But Linux Mint has a default setting to show a `*` for every character.
 
 # Pipe
 

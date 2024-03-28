@@ -1,7 +1,9 @@
 # MultiMC
 
-- Download the .deb file for MultiMC from [here](https://multimc.org).
-- It will be under the Linux downloads and the download link for **Debian/Ubuntu** is what we are looking for.
-- After downloading it, locate to the file on the file manager and double click on the file and it will install MultiMC on your system for you.
-- Now open MultiMC and login and create instances as per usual.
-- Make sure to select the right Java version that you installed in the previous step from the list of auto detected Java installations. Linux Mint comes with a pre-installed Java version which is pretty outdated for Minecraft.
+- Here, we will be installing a fork of MultiMC called [Prism Launcher](https://prismlauncher.org).
+- Open up a terminal and type in these commands:
+```bash
+sudo dnf copr enable g3tchoo/prismlauncher
+sudo dnf install prismlauncher
+```
+- This should install Prism Launcher. Make sure to select the correct Java Version while setting up the launcher.

@@ -83,22 +83,29 @@ sudo systemctl start rc-local
 **NOTE: If you don't have systemd on your distribution, you can use the same script and run it at the start of your session.**
 
 - And now you can keep clearing out these folders every 300s or so by running a simple script in the background.
-- The script would look something like this
+- This script preserves the training maps (their folder name must start with "Z") and the last 5 random worlds for verification purposes.
+- Replace "X" with your number of instances.
 
 ```bash
 #!/bin/bash
+IFS=$'\n'
 cd /tmp/mc
 while true
-    do
-        for i in {1..15}
-        do
-            cd $i && rm -r $(ls -t1 | tail -n 20) && cd ..
+    do 
+        for i in {1..X}
+        do 
+            cd $i
+            for save in $(ls -t1 --ignore=Z* | tail -n +6)
+            do
+            	rm -r "$save"
+            done
+            cd ..
         done
         sleep 300
     done
 ```
 
-- Here the last number in the for loop is the total number of instances that you have. Make sure to name the folders exactly as in the above example for this script, i.e., `/tmp/mc/1` and so on.
+- Here the "X" in the for loop is the total number of instances that you have. Make sure to name the folders exactly as in the above example for this script, i.e., `/tmp/mc/1` and so on.
 - Now set the executable flag on the script by performing the following command in a terminal
 
 ```bash

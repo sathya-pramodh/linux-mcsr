@@ -32,5 +32,6 @@
 ---
 
 [Splitting audio for streams](./splitting-audio.md)
+[Setting up i3](./i3.md)
 [Boat Eye](./boat-eye.md)
 [Keymap Rebinds](./rebinding.md)

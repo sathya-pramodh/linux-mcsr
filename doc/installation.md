@@ -26,5 +26,11 @@ The instructions given below will install Fedora on your PC. Make sure to follow
 # Continuation of Installation
 
 - Click on **Begin Installation** and the installation of Fedora onto whatever disk/partition you chose will begin.
+- Once it is done, click on the **Finish Installation** button. This will close the installer.
+- Then you can click on the top right status tray and click on the power button to reboot the system. Make sure to reboot with the USB removed.
+- After rebooting, you will be prompted to **Start Setup** and setup your username and password.
+- Make sure to also enable third-party repositories during the setup. This will be required to install some software that might be proprietary but you might need them on a daily basis.
+- Now logout of the system, and in the login screen click on the cog icon and choose the option that says **GNOME on Xorg** as Fedora defaults to a Wayland session on the first boot and [resetti](https://github.com/tesselslate/resetti) doesn't function on Wayland as of now. Now you can log back into your system.
+- Also make sure to update your system as soon as you log back in by running the command `sudo dnf update` in a terminal.
 
-Your Linux installation is complete! We can now proceed with the post installation configuration.
+Your Linux installation is now complete! We can now proceed with the post installation configuration.

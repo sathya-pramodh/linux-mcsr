@@ -15,6 +15,9 @@ The instructions given below will guide you through the procedure to setup boat 
   - kwin (KDE Desktop Environment)
 - More will be added to this list as errors are reported.
 
+# i3
+i3 is a WM that has been tested a lot and it works very well with Fedora and all the tools. If you haven't setup i3 yet, you can do so in the **Setting up i3** section of this guide.
+
 # Setting up mouse drivers
 
 - Make sure that you have a Linux-compatible mouse (most Logitech and Razer mice should work. Make sure to check online if your mouse is Linux-compatible and is supported by any GUI software to configure DPI).

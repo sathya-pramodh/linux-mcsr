@@ -137,7 +137,7 @@ exit
 - Try out this command
 
 ```bash
-sudo apt update
+sudo dnf update
 ```
 
 - Super user privileges are required for package manager commands on any Linux system.

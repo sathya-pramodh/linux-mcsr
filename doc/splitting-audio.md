@@ -45,7 +45,7 @@ context.objects = [
 	{	factory = adapter
 		args = {
 			factory.name = support.null-audio-sink
-			node.name = "virtual-intput-1.conf"
+			node.name = "virtual-input-1"
 			media.class = Audio/Sink
 		}
 	}
@@ -59,7 +59,7 @@ context.objects = [
 	{	factory = adapter
 		args = {
 			factory.name = support.null-audio-sink
-			node.name = "virtual-input-2.conf"
+			node.name = "virtual-input-2"
 			media.class = Audio/Sink
 		}
 	}

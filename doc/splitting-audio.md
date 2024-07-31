@@ -73,8 +73,8 @@ This will create two virtual audio devices whenever pipewire service starts. If 
 systemctl --user daemon-reload && systemctl --user restart pipewire
 ```
 
-qpwgraph should now show two nodes with the names `virtual-input-1` and `virtual-input-2`.
-
+qpwgraph should now show two nodes with the names `virtual-input-1` and `virtual-input-2`.  
+Again, you can change out any instance of `virtual-input-1` and `virtual-input-2` to something else as they are just names. I just use them as it is to keep things consistent across the guide.
 
 # Setting up OBS
 

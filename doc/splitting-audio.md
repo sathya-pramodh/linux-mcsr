@@ -78,21 +78,19 @@ qpwgraph should now show two nodes with the names `virtual-input-1` and `virtual
 
 # Setting up OBS
 
-Open up `Settings` and go to the `Audio` tab, click on the drop down menu for `Desktop Audio` and pick `virtual-input-1`. Do the same for `Desktop Audio 2` except for `virtual-input-2`.
-
-If you have any more virtual device that you want to route, you may add `Audio Output Capture` sources and use the other virtual devices that way. Note that if you do this, you would be required to add the sources to all other scenes.
+Now head to OBS and make a scene called `Audio` for the sake of simplicity. Inside the scene, add two `JACK Input Client` sources called `virtual-input-1` and `virtual-input-2`. Just leave the properties as default. After adding the sources within the scene, add the scene to the scenes that you want audio in.
 
 # Setting up Audio Splits
 
-Open up qpwgraph and you should see the nodes `virtual-input-1` connecting to `OBS [Desktop Audio]` and `virtual-input-2` connecting to `OBS-1 [Desktop Audio 2]` or something similar.
+Open up qpwgraph and you should see the nodes `OBS Studio: virtual-input-1` and `OBS Studio: virtual-input-2`. Connect them to the virtual devices by dragging the `monitor_FL` and `monitor_FR` of `virtual-input-1` to `virtual-input-1:in_1` and `virtual-input-1:in_2` of `OBS Studio: virtual-input-1` respectively. Do the same for `OBS Studio: virtual-input-2`.
 
 If you wanna not have your Spotify music appear on VODs, you can route Spotify into one of the virtual devices, like `virtual-input-2`, by dragging `output_FL` to `playback_FL` and `output_FR` to `playback_FR`.
 
 Now on OBS, go into `Settings`, then to the `Output` tab. Under `Streaming`, tick the `Twitch VOD Track` box. If you're on simple output mode, it should default to 2. If you're in advanced output mode, pick 2.
 
-Now go back to the your OBS scene and click on the gear icon under `Audio Mixer`. There, you'll deselect track number 2 of the audio that contains your Spotify music. In this case, that is `Desktop Audio 2`. So deselect track 2 of `Desktop Audio 2` and now your Spotify music will not be inside your Twitch VODs.
+Now go back to the your OBS scene and click on the gear icon under `Audio Mixer`. There, you'll deselect track number 2 of the audio that contains your Spotify music. In this case, that is `virtual-input-2`. So deselect track 2 of `virtual-input-2` and now your Spotify music will not be inside your Twitch VODs.
 
-Similarly, route any other audio that you want into your virtual device, i.e. your Minecraft instances or lecture videos.
+Similarly, route any other audio that you want into your virtual devices, i.e. your Minecraft instances or lecture videos.
 
 Now hit `Ctrl + S` to save changes in qpwgraph.
 

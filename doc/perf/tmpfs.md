@@ -89,20 +89,17 @@ sudo systemctl start rc-local
 ```bash
 #!/bin/bash
 IFS=$'\n'
-cd /tmp/mc
 while true
-    do 
-        for i in {1..X}
-        do 
-            cd $i
-            for save in $(ls -t1 --ignore=Z* | tail -n +6)
-            do
-            	rm -r "$save"
-            done
-            cd ..
+do
+    for i in {1..X}
+    do
+        for save in $(ls /tmp/mc/$i -t1 --ignore=Z* | tail -n +6)
+        do
+            rm -r "/tmp/mc/$i/$save"
         done
-        sleep 300
     done
+    sleep 300
+done
 ```
 
 - Here the "X" in the for loop is the total number of instances that you have. Make sure to name the folders exactly as in the above example for this script, i.e., `/tmp/mc/1` and so on.

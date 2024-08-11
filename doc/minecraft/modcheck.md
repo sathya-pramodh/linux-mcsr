@@ -8,7 +8,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 Type=Application
-Name=NinjabrainBot
+Name=ModCheck
 Icon=minecraft
 Exec=java -jar /home/<user_name>/Downloads/ModCheck-0.6.jar
 ```

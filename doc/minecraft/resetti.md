@@ -1,27 +1,15 @@
 # resetti
+## Using SeedQueue with resetti
+- This is the Single Instance Macro we would be using to run alongside [SeedQueue](https://github.com/kingcontaria/seedqueue). This would mainly be used to configure and manage your alternate resolutions and write your own custom hooks for each of those resolutions. You can refer to SeedQueue's setup video [here](https://www.youtube.com/watch?v=fGu2MYZxh_c).
+- Go to [this](https://github.com/tesselslate/resetti/releases/latest) link and download resetti's latest version. You can use the `.rpm` file to download the binary through rpm or you can download the binary directly. **NOTE** With the RPM download, you'll be able to execute `resetti` directly in your terminal without needing the `./` in front of it. With the binary download, you'd have to change your current directory to the directory containing the downloaded binary and then use `./resetti` to run resetti. You'd also have to set the executable flag on the binary by running `chmod +x ./resetti` in a terminal for the first time after you download the binary.
+- You can check if resetti is installed correctly by running `resetti version` in a terminal and seeing if it posts, into the terminal, the version of resetti that you installed from the github.
+- An example config can be found at `~/.local/share/resetti/default.toml` or `/usr/share/resetti/default.toml` depending on how you installed it.
+- You can create a new profile from this example config running `./resetti new <profile_name>` in a terminal, by replacing the `<profile_name>` with whatever profile name you'd want to give.
+  Eg: `./resetti new seedqueue1`
+- The hooks and their documentation can be found [here](https://github.com/tesselslate/resetti/blob/main/doc/configuration.md)
+- You can now run resetti with `./resetti <profile_name>` to run the macro :D.
 
-- This is the Multi Instance macro we will be using on Linux.
-- To install it, go [here](https://github.com/tesselslate/resetti/releases/latest). Download the binary from the github release. If you are using Firefox (the default browser for Fedora) it should download the binary to the **Downloads** folder. If you download it elsewhere, replace **Downloads** with the path to that folder in the command given below. E.g: If you download it to your **Documents** folder, then your path would look something like `/home/<user_name>/Documents`.
-- To update the binary, delete the binary from your **Downloads** folder and then go through the install process for **resetti** again.
-- For more detailed install instructions with setup for OBS and everything, refer to the docs for **resetti** [here](https://github.com/tesselslate/resetti).
-- We are planning to add an auto-updating feature to the binary so you don't have to go through the process over and over again.
-- To execute the macro, open a terminal window by hitting `Ctrl+Alt+T`. Now go into your **Downloads** folder by performing the following command (replace Downloads with the path you got from above if you downloaded the binary to another folder)
-
-```bash
-cd Downloads
-```
-
-- Now, set the executable flag to the binary by executing the following command. **NOTE: This has to be done only once(after an update or after the first download)**
-
-```bash
-chmod +x resetti
-```
-
-- Now, you can start the macro by doing this following command
-
-```bash
-./resetti <config_name>
-```
-
-- Here, replace **<config_name>** with the configuration name you want to use. All about the configuration of the macro is, again, given in the docs for **resetti** [here](https://github.com/tesselslate/resetti/).
-- If you have any questions, asking it in the [resetti discord](https://discord.gg/fwZA2VJh7k) is your best option.
+## Using classic wall with resetti
+- If you would like to run resetti with its Wall features still, you can look [here](https://github.com/tesselslate/resetti/releases/tag/v0.6.1) to download the binary for the last stable wall release of resetti.
+- You would need to configure everything the same way as before but you'd have to take a lot of extra steps as listed clearly [here](https://github.com/tesselslate/resetti/blob/main/doc/README.md).
+- If you have any questions, feel free to join the [resetti discord](https://discord.gg/fwZA2VJh7k) and make a thread in the `help` channel there.

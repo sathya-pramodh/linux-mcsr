@@ -100,4 +100,3 @@ If you have any issues regarding Spotify desktop app connections flickering from
 
 - We are done with setting up audio splitting on Linux.
 - Again, this is very dependent on your hardware and setup and this is highly untested. If you get any issues while setting this up, post an issue [here](https://github.com/sathya-pramodh/linux-mcsr/issues) or even better, join the [resetti Discord server](https://discord.gg/g9b99fxW) and we'll try and help you.
-- You can go [here](https://github.com/sathya-pramodh/linux-mcsr/blob/main/doc/post-install.md#update-cycle) to continue with the post install instructions.

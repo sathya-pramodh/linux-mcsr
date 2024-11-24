@@ -1,6 +1,6 @@
 ## Jemalloc setup for better Minecraft Performance
 
-- To install `jemalloc` on Fedora as guided [here](https://github.com/tesselslate/resetti/blob/main/doc/troubleshooting.md#improving-malloc-performance), open up a terminal and type in the command `sudo dnf install jemalloc-devel` and type in the password as prompted.
+- To install `jemalloc` on Fedora as guided [here](https://github.com/tesselslate/resetti/blob/main/doc/optimization.md#malloc-improvements), open up a terminal and type in the command `sudo dnf install jemalloc-devel` and type in the password as prompted.
 - This should setup jemalloc for you. Just make sure to add the wrapper commands as guided in resetti's docs.
 
 ## GLFW Setup to prevent BadWindow crashes.
